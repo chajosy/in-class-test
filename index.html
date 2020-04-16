@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data in sidebar | CARTO</title>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <!-- Load Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      rel="stylesheet"
+    />
+
+    <!-- Load our styles -->
+    <link href="./styles.css" rel="stylesheet" />
+
+    <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+
+    <!-- Load our JavaScript -->
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <!--
+      We put the map and sidebar in a map-wrapper so they will be positioned
+      and kept together
+    -->
+    <div class="map-wrapper">
+      <div id="map"></div>
+      <div class="sidebar">
+        <div id="title">
+          <h2>Food Scrap Drop-Off Locations</h2>
+        </div>
+        <div id="subtitle">
+          <h3>New York City</h3>
+        </div>
+        <div id="explainer">
+          <h4>
+            This map shows the locations where NYC residents can drop off their
+            food scraps to be composted. For more information on what you can
+            and can't bring, see:
+            <a
+              href="https://www1.nyc.gov/assets/dsny/site/services/food-scraps-and-yard-waste-page/nyc-food-scrap-drop-off-locations"
+              target="_blank"
+              >NYC Department of Sanitation</a
+            >
+          </h4>
+          <div class="button-zoom">
+            <button class="zoom-to-data-button">
+              Zoom to Data
+            </button>
+            <button class="reset-button">
+              Reset Zoom
+            </button>
+            <br />
+            <br />
+            <div id="information">
+              Click on the points on the map to see more information about the
+              drop site.
+            </div>
+          </div>
+          <div class="checkboxes">
+            Use the checkboxes to filter drop sites by borough.
+            <br />
+            <br />
+            <div>
+              <label>
+                <input type="checkbox" class="brooklyn-checkbox" />
+                Brooklyn
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" class="queens-checkbox" />
+                Queens
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" class="bronx-checkbox" />
+                Bronx
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" class="statenIsland-checkbox" />
+                Staten Island
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="checkbox" class="manhattan-checkbox" />
+                Manhattan
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- We create a div where the feature data will go when clicked on: -->
+        <div class="sidebar-feature-content"></div>
+        <div class="sidebar-footer">
+          Data Source:
+          <a
+            href="https://data.cityofnewyork.us/Environment/Food-Scrap-Drop-Off-Locations-in-NYC/if26-z6xq"
+            target="_blank"
+            >NYC Open Data</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
