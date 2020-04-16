@@ -1,0 +1,133 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h2 {
+  margin: 0px 0px 20px 0px; 
+}
+
+h3 {
+  margin: 10px 0px; 
+}
+.map-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  position: absolute;
+  height: 100%;
+  width: 72%;
+}
+
+.reset-button {
+  font-weight: lighter;
+  font-family: sans-serif;
+}
+
+.zoom-to-data-button{
+  font-weight: lighter;
+  font-family: sans-serif;
+}
+
+/*
+ * We position the sidebar to the right by using float and setting the width
+ * to 100% - the width of the map, in this case 100% - 75% = 25%
+ */
+.sidebar {
+  background: #DDEAD9;
+  border-top-style: solid;
+  border-top-width: 3mm;
+  border-bottom-style: solid;
+  border-bottom-width: 3mm;
+  float: right;
+  height: 100%;
+  padding: 12px;
+  width: 28%;
+  overflow: scroll;
+}
+
+.sidebar-footer {
+  margin-top: 50px;
+}
+
+.sidebar-feature-content {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1f8600;
+  font-family: sans-serif;
+  line-height: 1.1em;
+  letter-spacing: -.5px;
+  
+}
+
+#title {
+  color: black;
+  font-size: 2.5em;
+  font-weight: bold;
+  line-height: 1.1em;
+  text-decoration-line: none;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+#subtitle {
+  color: black;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.1em;
+  text-decoration-line: none;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+#explainer {
+  color: black;
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  line-height: 1.1em;
+  letter-spacing: -.5px;
+}
+
+#information {
+  color: black;
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: sans-serif;
+  line-height: 1.1em;
+  letter-spacing: -.5px;
+}
+
+
+.checkboxes {
+  background: #DDEAD9;
+  padding: 15px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+  letter-spacing: -.5px;
+  top: 15px;
+  z-index: 20000;
+}
+
+
+.sidebar-footer {
+  color: black;
+  font-size: 10px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  line-height: 1.1em;
+  letter-spacing: -.5px;
+}
